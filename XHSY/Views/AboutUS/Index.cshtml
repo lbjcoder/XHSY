@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<input type="hidden" id="select" value="@ViewBag.id" />
+   新闻中心
+<div id="news">
+
+
+    <img style="width:500px;height:300px" src="~/Styles/Images/news.png" />
+
+</div>
+    联系我们
+<div id="contactus">
+
+    <img style="width:500px;height:300px" src="~/Styles/Images/partner.png" />
+
+
+</div>
+  加入我们
+<div id="joinus">
+
+    <img style="width:500px;height:300px" src="~/Styles/Images/partner.png" />
+</div>
+@section scripts
+{
+    <script>
+
+        console.log($("#select").val())
+    </script>
+}

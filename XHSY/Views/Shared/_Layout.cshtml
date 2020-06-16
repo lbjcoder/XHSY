@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>象汇实业</title>
+    <link rel="icon" href="~/Styles/images/32.png" type="image/x-icon">
+    <link href="~/Scripts/layui/css/layui.css" rel="stylesheet" />
+    <style>
+        body .layui-nav .layui-nav-more {
+            display: none
+        }
+        .layui-nav {
+            position: relative;
+            padding: 0 20px;
+            background-color: #91b800;
+            color: #fff;
+            border-radius: 2px;
+            font-size: 0;
+            box-sizing: border-box;
+       text-align:right
+        }
+    </style>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="layui-container">
+        <div class="nav-list">
+            <!-- 公司logo -->
+            <div class="nav-logo">
+                <a href="/Home/Index">
+                    <img src="~/Styles/Images/LOGO.png" alt="网络公司">
+                </a>
+            </div>
+            <ul class="layui-nav" >
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <span class="text">首页</span>
+
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd class="layui-this"><a href="/Home/Index/1">索引</a></dd>
+                        <dd><a href="/Home/Index/2">解决方案</a></dd>
+                        <dd><a href="/Home/Contact">案例展示</a></dd>
+                        <dd><a href="/Home/Contact">新闻中心</a></dd>
+                        <dd><a href="/Home/Contact">合作伙伴</a></dd>
+                        <dd><a href="/Home/Contact">导航栏</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="javascript:;">
+                        <span class="text">解决方案</span>
+
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/Home/index">医院智慧后勤</a></dd>
+                        <dd><a href="/Home/About">高校智慧后勤</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="javascript:;">
+                        <span class="text">走进万象</span>
+
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/Home/index">象汇简介</a></dd>
+                        <dd><a href="/Home/About">企业文化</a></dd>
+                        <dd><a href="/Home/About">企业理念</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="javascript:;">
+                        <span class="text">案例展示</span>
+
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/Home/index">案例展示</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item ">
+                    <a href="javascript:;">
+                        <span class="text">关于我们</span>
+
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/AboutUS/index/1">新闻中心</a></dd>
+                        <dd><a href="/AboutUS/index/2">联系我们</a></dd>
+                        <dd><a href="/AboutUS/index/3">加入我们</a></dd>
+                    </dl>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div>
+
+            </div>
+            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 应用程序</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/layui/layui.all.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
